@@ -1,0 +1,47 @@
+{
+	"name": "elusiv-samples",
+	"version": "1.0.0",
+	"description": "Sample code using the Elusiv SDK",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint --ext .ts src/",
+		"lint:fix": "eslint --ext .ts src/ --fix",
+		"build": "tsc",
+		"topup": "npm run build && node dist/Topup.js",
+		"send": "npm run build && node dist/Send.js",
+		"tx-fetching": "npm run build && node dist/TxFetching.js",
+		"solana-pay": "npm run build && node dist/SolanaPayDemo.js",
+		"spl": "npm run build && node dist/SPL.js",
+		"traceable-tx": "npm run build && node dist/TraceableTx.js",
+		"viewing-key": "npm run build && node dist/ViewingKey.js",
+		"root-viewing-key": "npm run build && node dist/RootViewingKey.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/elusiv-privacy/elusiv-samples.git"
+	},
+	"author": "Elusiv Privacy",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/elusiv-privacy/elusiv-samples/issues"
+	},
+	"homepage": "https://github.com/elusiv-privacy/elusiv-samples#readme",
+	"dependencies": {
+		"@elusiv/sdk": "^0.1.18",
+		"@noble/ed25519": "^1.7.1",
+		"@solana/pay": "^0.2.4",
+		"@solana/spl-token": "^0.3.7",
+		"@solana/web3.js": "^1.73.0",
+		"@types/axios": "^0.14.0",
+		"axios": "^1.4.0",
+		"bignumber.js": "^9.1.1",
+		"ts-node": "^10.9.1"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.59.8",
+		"@typescript-eslint/parser": "^5.59.8",
+		"eslint": "^8.41.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"typescript": "^4.9.4"
+	}
+}
